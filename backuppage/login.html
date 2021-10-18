@@ -1,0 +1,36 @@
+<!doctype html>
+<html  class="x-admin-sm">
+<head>
+	<meta charset="UTF-8">
+	<title>长期护理产教研平台</title>
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/login.css" />
+	<link rel="stylesheet" href="css/xadmin.css" />
+    <!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="lib/layui/layui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="login-bg">
+    <div class="login layui-anim layui-anim-up">
+        <div class="message">长期护理产教研平台-管理登录</div>
+        <div id="darkbannerwrap"></div>
+        
+        <form method="post" class="layui-form" >
+            <input id="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" />
+            <hr class="hr15">
+            <input id="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input" />
+            <hr class="hr15">
+            <input id="loginBtn" value="登录" lay-submit lay-filter="login" style="width:100%;" type="button" />
+            <hr class="hr20" />
+        </form>
+    </div>
+</body>
+</html>

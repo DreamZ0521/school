@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>护理员列表页</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/xadmin.css">
+        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/xadmin.js"></script>
+		<script type="text/javascript" src="../js/nursingmanager/list.js"></script>
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+		<div class="x-nav">
+			<span class="layui-breadcrumb">
+				<a href="#">首页</a>
+				<a href="#">评教管理</a>
+				<a>
+					<cite>标准体系</cite>
+				</a>
+<!--				标准等级管理-->
+			</span>
+			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
+			    数据操作提示
+			</span>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="开始日" name="start" id="start">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="截止日" name="end" id="end">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input type="text" name="username"  placeholder="护理等级" autocomplete="off" class="layui-input">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
+<!--                                </div>-->
+                            </form>
+                        </div>
+                        <div class="layui-card-header">
+                            <button style="background-color: blue"   onclick="xadmin.add('新建标准体系等级','examarrangementadd.html',800,480)"
+									class="layui-btn layui-btn-danger">
+<!--								<i class="layui-icon"></i>-->
+								新建标准体系等级</button>
+                        </div>
+                        <div class="layui-card-body layui-table-body layui-table-main">
+                            <table class="layui-table layui-form">
+								<thead>
+								<tr>
+
+									<th>等级对应选项（对应分值）</th>
+									<th>查看引用</th>
+									<th>删除</th>
+									<th>修改</th>
+
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>2025春</td>
+
+									<td>
+										<a title="引用"  onclick="xadmin.open('查看标准等级引用','examarrangementyinyong.html',800,480)" href="javascript:;">
+										<i class="layui-icon">&#xe642;</i>
+									</a>
+									</td>
+
+									<td>
+										<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+											<i class="layui-icon">&#xe640;</i>
+										</a>
+									</td>
+
+										<td class="td-manage">
+<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+<!--												<i class="layui-icon">&#xe601;</i>-->
+<!--											</a>-->
+											<a title="编辑"  onclick="xadmin.open('编辑','',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642;</i>
+											</a>
+
+										</td>
+									</tr>
+
+
+								</tbody>
+                            </table>
+                        </div>
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                <div>
+									<a class="prev" href="">&lt;&lt;</a>
+									<a class="num" href="">1</a>
+									<span class="current">2</span>
+									<a class="num" href="">3</a>
+									<a class="next" href="">&gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
