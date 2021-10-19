@@ -19,28 +19,45 @@
             // 是否开启刷新记忆tab功能
             // var is_remember = false;
 			function addtabprofessionalmanagement(){
-				 console.log("dadad");
-				 var a=['护理员信息列表','nursingmanage/list.html',true,'护理员资质审核','nursingmanage/check.html'];
+				 // console.log("dadad");
+				 // var a=['护理员信息列表','nursingmanage/list.html',true,'护理员资质审核','nursingmanage/check.html'];
 				// xadmin = {
 				// 	add_tab:function('护理员信息列表','nursingmanage/list.html',true);
 				// }
 			   // xadmin.prototype.add_tab('护理员信息列表','nursingmanage/list.html',true);
 			   // xadmin.prototype.add_tab = function('护理员信息列表','nursingmanage/list.html',true);
-			   window.xadmin.add_tab('承训专业任务管理','nursingmanage/undertakeprofessionaltrainingtasks.html',true);
-			   window.xadmin.add_tab('年度开设专业','nursingmanage/majorofferedannually.html');
+			   $('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
+
+			   window.xadmin.add_tab('年度开设专业','nursingmanage/majorofferedannually.html',false);
 			   window.xadmin.add_tab('专业班次一览表','nursingmanage/scheduleofprofessionalshifts.html');
-			   
+               window.xadmin.add_tab('承训专业任务管理','nursingmanage/undertakeprofessionaltrainingtasks.html');
 			}
 			function addtabtalent(){
-			
-			   window.xadmin.add_tab('培养方案管理','talenttraining/cultvationprogrammanagement.html');
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
+
 			   window.xadmin.add_tab('培养方案执行','talenttraining/trainingprogramlmplementation.html');
-			   
+               window.xadmin.add_tab('培养方案管理','talenttraining/cultvationprogrammanagement.html');
 			   
 			}
+			function backup(){
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
+			  
+			   window.xadmin.add_tab('课程库管理','nursingmanage/backup.html');
+			   
+			}
+			function theaching(){
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
+			  
+			   window.xadmin.add_tab('教材库管理','nursingmanage/theaching.html');
+			   
+			}
+			
+		
+			
+			
 			//师训管理-1-teachingtaskmanagment
 			function addtabacteq(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('制定专业班次学期执行计划','teachingtaskmanagment/msasep.html');
 			   window.xadmin.add_tab('教学班管理','teachingtaskmanagment/classmanagement.html');
 			    window.xadmin.add_tab('审核教学任务','teachingtaskmanagment/reviewteachingtasks.html');
@@ -50,7 +67,7 @@
 			}
 			//师训管理-排课管理-pkgl
 			function addtabpkgl(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('排课设置','pkgl/curriculumsetting.html');
 			   window.xadmin.add_tab('排课','pkgl/coursescheduling.html');
 			    window.xadmin.add_tab('调课','pkgl/classswitching.html');
@@ -64,7 +81,7 @@
 			
 			//师训管理-课表查询-schedulethequery
 			function schedulethequery(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('日课表查询','schedulethequery/dayscheduleinquiry.html');
 			   window.xadmin.add_tab('时间段课表查询','schedulethequery/timeclassschedulequery.html');
 			    window.xadmin.add_tab('专业班次课表查询','schedulethequery/pscsi.html');
@@ -77,7 +94,7 @@
 			}
 			//师训管理-场地使用管理-stieusermanagement
 			function stieusermanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('空闲场地查询','stieusermanagement/freespaceenquiry.html');
 			   window.xadmin.add_tab('场地使用登记','stieusermanagement/siteregistration.html');
 			
@@ -87,7 +104,7 @@
 			}
 			//师训管理-课时量管理-management of class hours
 			function managementofclasshours(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('课时量审核','managementofclasshours/classhouraudit.html');
 			   window.xadmin.add_tab('课时量查询','managementofclasshours/classhourquery.html');
 			
@@ -97,7 +114,7 @@
 			}
 			//师训管理-选课管理-course management
 			function coursemanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('选修课开课管理','coursemanagement/electivecouresopeningmang.html');
 			   window.xadmin.add_tab('选课批次管理','coursemanagement/batchmangofcouresselection.html');
 			   window.xadmin.add_tab('按教学班打印花名册','coursemanagement/printtherosterbyclass.html');
@@ -110,7 +127,7 @@
 			}
 			//课程考核管理-课程考核实施计划管理-curriculum assessment implementation plan management
 			function curriculumassessmentimplementationplanmanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('课程考核实施计划审核','curriculumassessmentimplementationplanmanagement/rcaip.html');
 			   window.xadmin.add_tab('课程考核实施计划查询','curriculumassessmentimplementationplanmanagement/caipi.html');
 			
@@ -120,7 +137,7 @@
 			}
 			//课程考核管理-考试计划管理-examination plan management
 			function examinationplanmanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('考试安排','examinationplanmanagement/examarrangement.html');
 			   window.xadmin.add_tab('学员条形码打印','examinationplanmanagement/studentbarcodeprinting.html');
 			   window.xadmin.add_tab('缓考审批','examinationplanmanagement/iftheexaminationandapproval.html');
@@ -133,7 +150,7 @@
 			}
 			//课程考核管理-试卷和试题管理-examination paper and question management
 			function examinationpaperandquestionmanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('试卷命题和审批管理','examinationpaperandquestionmanagement/examarrangement.html');
 			   window.xadmin.add_tab('试卷册材料打印','examinationpaperandquestionmanagement/testbookmaterialprinting.html');
 		
@@ -144,7 +161,7 @@
 			}
 			//课程考核管理-题库和在线考试管理-question bank and online test management
 			function questionbankandonlinetestmanagement(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('试题库管理','questionbankandonlinetestmanagement/questionbankmanagement.html');
 			   window.xadmin.add_tab('试卷库管理','questionbankandonlinetestmanagement/examinationpaperbankmanagement.html');
 			    window.xadmin.add_tab('在线考试','questionbankandonlinetestmanagement/onlineexamination.html');
@@ -156,6 +173,7 @@
 			}
 			//课程考核管理-成绩管理-score management
 			function scoremanagement(){
+				$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			 window.xadmin.add_tab('学员成绩录入','scoremanagement/studentscoreentry.html');
 			   window.xadmin.add_tab('学员成绩录入','scoremanagement/studentscoreentry.html');
 			   window.xadmin.add_tab('未录入成绩课程查询','scoremanagement/norecordscorequery.html');
@@ -171,7 +189,7 @@
 			}
 			//课程考核管理-成绩打印-results the print
 			function resultstheprint(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('专业班次成绩单打印','resultstheprint/professionalshiftresultsprinted.html');
 			   window.xadmin.add_tab('课程成绩单打印','resultstheprint/coursetranscriptprinting.html');
 			    window.xadmin.add_tab('学员成绩单打印','resultstheprint/studenttranscriptprinting.html');
@@ -179,7 +197,7 @@
 			}
 			//课程考核管理-成绩分析-achievement analysis
 			function achievementanalysis(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('学员成绩排名','achievementanalysis/studentranking.html');
 			   window.xadmin.add_tab('课程考核成绩分布','achievementanalysis/studentbarcodeprinting.html');
 			   
@@ -187,7 +205,7 @@
 			}
 			//评教管理-指标体系-target system
 			function targetsystem(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('标准等级管理','examinationplanmanagement/examarrangement.html');
 			   window.xadmin.add_tab('标准体系管理','examinationplanmanagement/studentbarcodeprinting.html');
 			   
@@ -195,7 +213,7 @@
 			}
 			//评教管理-学员评教-students'
 			function targetsystem(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('设置参评对象','examinationplanmanagement/examarrangement.html');
 			   window.xadmin.add_tab('创建学员评教活动','examinationplanmanagement/studentbarcodeprinting.html');
 			     window.xadmin.add_tab('评教结果统计分析','examinationplanmanagement/studentbarcodeprinting.html');
@@ -203,7 +221,7 @@
 			}
 			//评教管理-督导评教-the supervision appraisal
 			function thesupervisionappraisal(){
-			
+			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('角色分配','examinationplanmanagement/examarrangement.html');
 			   window.xadmin.add_tab('指标选择','examinationplanmanagement/studentbarcodeprinting.html');
 			     window.xadmin.add_tab('填报督导信息','examinationplanmanagement/studentbarcodeprinting.html');
@@ -212,7 +230,7 @@
 				  window.xadmin.add_tab('督导结果分析','examinationplanmanagement/studentbarcodeprinting.html');
 			}
 			
-			
+		
 			
 			
 		
@@ -271,13 +289,13 @@
 								</a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('课程库管理','nursingmanage/backup.html')">
+                                <a onclick="backup()">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>课程库管理</cite>
 								</a>
                             </li>
                             <li>
-                                <a onclick="xadmin.add_tab('教材库管理','nursingmanage/theaching.html')">
+                                <a onclick="theaching()">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>教材库管理</cite>
                                 </a>
@@ -582,22 +600,23 @@
         <!-- 左侧菜单结束 -->
         <!-- 右侧主体开始 -->
         <div class="page-content">
-            <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
+            <div class="layui-tab tab" lay-allowClose="false" lay-filter="xbs_tab" >
                 <ul class="layui-tab-title">
                     <li class="home">
                         <i class="layui-icon">&#xe68e;</i>我的工作台</li></ul>
-                <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
+               <div class="layui-unselect layui-form-select layui-form-selected" id="tab_right">
                     <dl>
                         <dd data-type="this">关闭当前</dd>
                         <dd data-type="other">关闭其它</dd>
                         <dd data-type="all">关闭全部</dd></dl>
                 </div>
-                <div class="layui-tab-content">
-                    <div class="layui-tab-item layui-show">
-                        <iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+				
+                <div class="layui-tab-content " lay-allowclose="false">
+                    <div class="layui-tab-item layui-show ">
+                        <iframe  src='./welcome.html'  frameborder="0" scrolling="yes" class="x-iframe"></iframe>
                     </div>
                 </div>
-                <div id="tab_show"></div>
+                <div id="tab_show" ></div>
             </div>
         </div>
         <div class="page-content-bg"></div>

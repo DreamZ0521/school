@@ -50,7 +50,7 @@ function member_del(obj,id){
 
 function delAll (argument) {
 
-    window.location.href='undertakeprofessionaltrainingtasks2.html'
+    window.location.href='undertakeprofessionaltrainingtasks3.html'
 	// var ids = [];
     // // 获取选中的id
     // $('tbody input').each(function(index, el) {
@@ -67,7 +67,7 @@ function delAll (argument) {
 
 function delAll2 (argument) {
 
-	window.location.href='majorofferedannually2.html'
+	window.location.href='majorofferedannuallyadd.html'
 	// var ids = [];
 	// // 获取选中的id
 	// $('tbody input').each(function(index, el) {

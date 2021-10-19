@@ -2,7 +2,7 @@
 <html class="x-admin-sm">
     <head>
         <meta charset="UTF-8">
-        <title>护理员列表页</title>
+        <title>信息工程大学洛阳校区教务管理系统</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -24,7 +24,7 @@
 				<a>
 					<cite>专业管理</cite>
 				</a>
-<!--                年度开设专业-->
+			<!--年度开设专业-->
 			</span>
 			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
 			    数据操作提示
@@ -51,10 +51,21 @@
                             </form>
                         </div>
                         <div class="layui-card-header">
-                            <button style="background-color: blue" class="layui-btn layui-btn-danger" onclick="delAll2()">
-<!--								<i class="layui-icon"></i>-->
-								查看详情</button>
+                            <!--<input style="height: 25px">-->
+							请选择查询年度
+                            &nbsp;&nbsp;
+                            <select style="height: 25px">
+                                <option>2015</option>x
+                                <option>2016</option>
+                                <option>2017</option>
+                            </select>
+                            &nbsp;&nbsp;
+                            <button style="background-color: blue" class="layui-btn layui-btn-danger">查询</button>
+							<button style="background-color: blue" onclick="xadmin.add('添加年度专业','majorofferedannuallyadd.html',800,480)" class="layui-btn layui-btn-danger">
+							    设置年度开设专业
+							</button>
                         </div>
+
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
                                 <thead>
@@ -71,7 +82,7 @@
 <!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 <!--										</td>-->
 										<td>2019</td>
-										<td>20</td>
+                                        <td><a style="color: blue" href="majorofferedannually2.html">20</a></td>
 
 <!--										<td class="td-manage">-->
 <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -90,7 +101,7 @@
 										<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 										<!--										</td>-->
 										<td>2018</td>
-										<td>20</td>
+										<td><a style="color: blue"  href="majorofferedannually2.html">20</a></td>
 
 										<!--										<td class="td-manage">-->
 										<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -109,7 +120,7 @@
 										<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 										<!--										</td>-->
 										<td>2017</td>
-										<td>20</td>
+                                        <td><a style="color: blue"  href="majorofferedannually2.html">20</a></td>
 
 										<!--										<td class="td-manage">-->
 										<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -129,8 +140,7 @@
                                         <!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
                                         <!--										</td>-->
                                         <td>2016</td>
-                                        <td>20</td>
-
+                                        <td><a  style="color: blue" href="majorofferedannually2.html">20</a></td>
                                         <!--										<td class="td-manage">-->
                                         <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
                                         <!--												<i class="layui-icon">&#xe601;</i>-->
@@ -148,7 +158,7 @@
                                         <!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
                                         <!--										</td>-->
                                         <td>2015</td>
-                                        <td>20</td>
+                                        <td><a style="color: blue"  href="majorofferedannually2.html">20</a></td>
 
                                         <!--										<td class="td-manage">-->
                                         <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -164,6 +174,11 @@
                                     </tr>
 								</tbody>
                             </table>
+                            <p>共有：14 条记录 </p>
+
+                            <div>
+                                导出数据：<button>导出Excel</button>
+                            </div>
                         </div>
                         <div class="layui-card-body ">
                             <div class="page">

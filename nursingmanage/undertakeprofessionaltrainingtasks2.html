@@ -2,28 +2,37 @@
 <html class="x-admin-sm">
     <head>
         <meta charset="UTF-8">
-        <title>护理员列表页</title>
+        <title>信息工程大学洛阳校区教务管理系统</title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
         <link rel="stylesheet" href="../css/font.css">
         <link rel="stylesheet" href="../css/xadmin.css">
-        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+
+		<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+		<script src="../lib/layui/layui.js" charset="utf-8"></script>
         <script type="text/javascript" src="../js/xadmin.js"></script>
 		<script type="text/javascript" src="../js/nursingmanager/list.js"></script>
+
+
         <!--[if lt IE 9]>
+
+
           <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
           <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
+
     <body>
 		<div class="x-nav">
 			<span class="layui-breadcrumb">
 				<a href="#">首页</a>
 				<a href="#">计划管理</a>
-				<a>
-					<cite>专业管理</cite>
-				</a>
+				<a href="#">专业管理</a>
+				<a><cite>专科培养层次管理</cite></a>
 			</span>
 			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
 			    数据操作提示
@@ -32,7 +41,7 @@
         <div class="layui-fluid">
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
-                    <div class="layui-card">
+                    <div class="layui-card" style="height: 400px">
                         <div class="layui-card-body ">
                             <form class="layui-form layui-col-space5">
 <!--                                <div class="layui-inline layui-show-xs-block">-->
@@ -50,10 +59,15 @@
                             </form>
                         </div>
                         <div class="layui-card-header">
-                            <button style="background-color: blue"   onclick="xadmin.add('添加专业','undertakeprofessionaltrainingtasks3.html',800,480)"
-									class="layui-btn layui-btn-danger">
-<!--								<i class="layui-icon"></i>-->
-								添加专业</button>
+							<input style="height: 28px" value="专业名称" />
+							&nbsp;&nbsp;
+							<button style="background-color: blue" class="layui-btn layui-btn-danger">查询</button>
+							&nbsp;&nbsp;
+							<button style="background-color: blue" onclick="xadmin.add('添加专业','undertakeprofessionaltrainingtasks3.html',800,480)" class="layui-btn layui-btn-danger">
+								添加专业
+							</button>
+							&nbsp;&nbsp;
+							<button style="background-color: blue" class="layui-btn layui-btn-danger">批量选中删除</button>
                         </div>
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
@@ -92,19 +106,47 @@
 <!--												<i class="layui-icon">&#xe601;</i>-->
 <!--											</a>-->
 											<a title="编辑"  onclick="xadmin.open('详情','undertakeprofessionaltrainingtasks4.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+												<i class="layui-icon">&#xe642; 编辑</i>
 											</a>
+											&nbsp;&nbsp;
 											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
+												<i class="layui-icon">&#xe640; 删除</i>
 											</a>
 										</td>
 									</tr>
-
-
-
+									
+									<tr>
+										<td>
+											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
+										</td>
+										<td>计算机</td>
+										<td>电脑</td>
+										<td>021</td>
+										<td>101</td>
+										<td>理科</td>
+										<td>专科</td>
+										<td>三年</td>
+										<td>是</td>
+										<td>有大用</td>
+										<td class="td-manage">
+											<a title="编辑"  onclick="xadmin.open('详情','undertakeprofessionaltrainingtasks4.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 编辑</i>
+											</a>
+											&nbsp;&nbsp;
+											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+												<i class="layui-icon">&#xe640; 删除</i>
+											</a>
+										</td>
+									</tr>
 								</tbody>
                             </table>
+							<p>共有：14 条记录 </p>
+
+							<div>
+								导出数据：<button>导出Excel</button>
+							</div>
                         </div>
+
                         <div class="layui-card-body ">
                             <div class="page">
                                 <div>

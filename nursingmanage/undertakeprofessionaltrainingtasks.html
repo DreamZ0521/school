@@ -32,8 +32,8 @@
         </div>
         <div class="layui-fluid">
             <div class="layui-row layui-col-space15">
-                <div class="layui-col-md12">
-                    <div class="layui-card">
+                <div class="layui-col-md12" >
+                    <div class="layui-card"  style=" height : 770px">
                         <div class="layui-card-body ">
                             <form class="layui-form layui-col-space5">
 <!--                                <div class="layui-inline layui-show-xs-block">-->
@@ -51,9 +51,9 @@
                             </form>
                         </div>
                         <div class="layui-card-header">
-                            <button style="background-color: blue" class="layui-btn layui-btn-danger" onclick="delAll()">
+                            <button style="background-color: blue" class="layui-btn layui-btn-danger"   onclick="xadmin.add('添加专业','undertakeprofessionaltrainingtasks3.html',800,480)">
 <!--								<i class="layui-icon"></i>-->
-								查看详情</button>
+								添加专业</button>
                         </div>
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
@@ -71,9 +71,9 @@
 <!--										<td>-->
 <!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 <!--										</td>-->
-										<td>洛阳院区</td>
+										<td  rowspan="3">洛阳院区</td>
 										<td>专科</td>
-										<td>20</td>
+                                        <td><a style="color: blue" href="undertakeprofessionaltrainingtasks2.html">20</a></td>
 
 <!--										<td class="td-manage">-->
 <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -91,9 +91,9 @@
 										<!--										<td>-->
 										<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 										<!--										</td>-->
-										<td>洛阳院区</td>
+
 										<td>本科</td>
-										<td>20</td>
+                                        <td><a style="color: blue" href="undertakeprofessionaltrainingtasks2.html">20</a></td>
 
 										<!--										<td class="td-manage">-->
 										<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -111,9 +111,9 @@
 										<!--										<td>-->
 										<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
 										<!--										</td>-->
-										<td>洛阳院区</td>
+
 										<td>研究生</td>
-										<td>20</td>
+                                        <td><a style="color: blue" href="undertakeprofessionaltrainingtasks2.html">20</a></td>
 
 										<!--										<td class="td-manage">-->
 										<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
@@ -127,6 +127,27 @@
 										<!--											</a>-->
 										<!--										</td>-->
 									</tr>
+                                    <tr>
+                                        <!--										<td>-->
+                                        <!--											<input type="checkbox" name="id" value="1"   lay-skin="primary">-->
+                                        <!--										</td>-->
+
+                                        <td colspan="2">合计</td>
+
+                                        <td><a style="color: blue" href="undertakeprofessionaltrainingtasks2.html">60</a></td>
+
+                                        <!--										<td class="td-manage">-->
+                                        <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+                                        <!--												<i class="layui-icon">&#xe601;</i>-->
+                                        <!--											</a>-->
+                                        <!--											<a title="编辑"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
+                                        <!--												<i class="layui-icon">&#xe642;</i>-->
+                                        <!--											</a>-->
+                                        <!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
+                                        <!--												<i class="layui-icon">&#xe640;</i>-->
+                                        <!--											</a>-->
+                                        <!--										</td>-->
+                                    </tr>
 
 
 

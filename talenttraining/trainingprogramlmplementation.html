@@ -8,9 +8,12 @@
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
         <link rel="stylesheet" href="../css/font.css">
         <link rel="stylesheet" href="../css/xadmin.css">
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		 <script src="../js/jquery-3.1.1.min.js" charset="utf-8"></script>
         <script src="../lib/layui/layui.js" charset="utf-8"></script>
         <script type="text/javascript" src="../js/xadmin.js"></script>
 		<script type="text/javascript" src="../js/nursingmanager/list.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
         <!--[if lt IE 9]>
           <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
           <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
@@ -28,12 +31,17 @@
 			</span>
 			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
 			    数据操作提示
+				<button  type="button" class="btn btn-default" title="Popover title"
+				        data-container="body" data-toggle="popover" data-placement="left"
+				        data-content="如果教研信息和教研室做了修改,需点击页面的'同步按钮'以统一数据" style="margin-left: 855px; color: #009688;">
+				    帮助
+				</button>
 			</span>
         </div>
         <div class="layui-fluid">
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
-                    <div class="layui-card">
+                    <div class="layui-card" style=" height : 770px">
                         <div class="layui-card-body ">
                             <form class="layui-form layui-col-space5">
 <!--                                <div class="layui-inline layui-show-xs-block">-->
@@ -51,16 +59,38 @@
                             </form>
                         </div>
                         <div class="layui-card-header">
-                            <button style="background-color: blue"   onclick="xadmin.add('添加年度专业','trainingprogramlmplementationadds.html',800,480)"
+                            <button style="background-color: blue" onclick="tz()"
 									class="layui-btn layui-btn-danger">
 <!--								<i class="layui-icon"></i>-->
 								批量引用培养方案</button>
+									<input style="height: 25px; margin-left: 25px;">
+								&nbsp;&nbsp;
+								<select style="height: 25px; margin-right: 10px;">
+									<option>专科</option>
+									<option>本科</option>
+									<option>研究生</option>
+								</select>
+								<button style="background-color: blue" class="layui-btn layui-btn-danger">
+									<!--								<i class="layui-icon"></i>-->
+									查询</button>
+								
+								<div class="btn-group">
+								<button  class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">年级<span class="caret"></span></button>
+								<ul class="dropdown-menu">
+								    <li><a href="##">2021</a></li>
+								    <li><a href="##">2020</a></li>
+									   <li><a href="##">2019</a></li>
+								</ul>
+								</div>
+								
+							
                         </div>
+						
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
 								<thead>
 								<tr>
-
+                                     <th>引用</th>
 									<th>专业【层次】</th>
 									<th>学制</th>
 									<th>培养方案【版本】</th>
@@ -71,6 +101,22 @@
 								</thead>
 								<tbody>
 								<tr>
+									<td class="td-manage">
+																				<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
+																					<i class="layui-icon">&#xe601;</i>
+																				</a>
+																				<!-- <a title="引用"  onclick="xadmin.open('编辑','trainingprogramlmplementationadd.html',800,480)" href="javascript:;">
+																					<i class="layui-icon">&#xe642;</i>
+																				</a>
+																				</a>
+									<!--											<a title="课程设置"  onclick="xadmin.open('课程设置','zhuan	yeupdate.html',800,480)" href="javascript:;">
+									<!--												<i class="layui-icon">&#xe642;</i>-->
+									<!--											</a>-->
+									<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
+									<!--												<i class="layui-icon">&#xe640;</i>-->
+									<!--											</a>-->
+																			</td>
+							
 									<td>英语</td>
 									<td>四年</td>
 									<td>英语（2001）</td>
@@ -80,10 +126,11 @@
 <!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
 <!--												<i class="layui-icon">&#xe601;</i>-->
 <!--											</a>-->
-											<a title="引用"  onclick="xadmin.open('编辑','trainingprogramlmplementationadd.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a title="编辑"  onclick="xadmin.open('编辑','trainingprogramlmplementationadd.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 编辑</i>
 											</a>
 											</a>
+										
 <!--											<a title="课程设置"  onclick="xadmin.open('课程设置','zhuan	yeupdate.html',800,480)" href="javascript:;">-->
 <!--												<i class="layui-icon">&#xe642;</i>-->
 <!--											</a>-->
@@ -112,4 +159,14 @@
             </div>
         </div> 
     </body>
+	<script>
+
+		
+		function tz(){
+			window.location.href='cultvationprogrammanagementadd.html'
+		
+		}
+	
+	
+	</script>
 </html>
