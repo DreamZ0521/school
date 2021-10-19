@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>护理项目列表页</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/xadmin.css">
+		   <link rel="stylesheet" href="../css/bootstrap.css">
+		    <script src="../js/jquery-3.1.1.min.js" charset="utf-8"></script>
+        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/xadmin.js"></script>
+		<script type="text/javascript" src="../js/nursingItemmanager/list.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		
+	
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+		
+		<div class="x-nav">
+			<span class="layui-breadcrumb">
+				<a href="#">首页</a>
+				<a href="#">师训管理</a>
+				<a href="#">教学任务管理</a>
+				<a>
+					<cite>制定专业班次学期执行计划</cite>
+					<cite>/批量从培养方案导入</cite>
+				</a>
+				
+			</span>
+			<!-- <span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="" title="刷新">
+			    帮助
+			</span> -->
+	
+			
+			
+		
+			
+        </div>
+<!--        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12"> -->
+              <!--      <div class="layui-card"> -->
+<!--                        <div class="layui-card-header">
+                            <button class="layui-btn" onclick="xadmin.open('添加护理项目','add.html',500,480)"><i class="layui-icon"></i>添加护理项目</button>
+                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除护理项目</button>
+                        </div> -->
+
+		  </div>
+	<!-- 	<div class="btn-group" style="margin-left: 960px;">
+			
+		  <button type="button" class="btn btn-default dropdown-toggle">从人才培养方案导入</button>
+		  <button type="button" class="btn btn-default dropdown-toggle" onclick="add()">添加课程</button>
+		  <button type="button" class="btn btn-default dropdown-toggle">移除选中</button>
+		</div> -->
+		
+		</div>
+<!--  <table class="table table-striped" style="margin-left: 10px;">
+  <tbody style="border: #000000;">
+    <tr>
+      <td class="col-md-4">专业:波斯语</td>
+	    <td class="col-md-3">专业班次：2021波斯语</td>
+      <td class="col-md-2">人数：8</td>
+	   <td class="col-md-3"><a href="cpseps.html">查看以往班次执行计划</a></td>
+    </tr>
+
+  </tbody>
+    </table> -->
+						
+                        <div class="layui-card-body layui-table-body layui-table-main" style="margin-top: 0px;">
+                            <table class="layui-table layui-form">
+                           人才培养基本信息
+									<tr>
+										<th style="width: 300px; background-color: #C2C2C2;">名称：</th>
+										<th>英语</th>
+										<th style="width: 300px; background-color: #C2C2C2;">版本：</th>
+									    <th>2021</th>
+									</tr>
+
+                              
+                              
+							
+						
+                            </table>
+<!--							<div>-->
+<!--							  <div   style="background-color: #C2C2C2; text-align: center; height: 25px">-->
+<!--							  任职教育人才培养方案-->
+<!--							  </div>-->
+<!--							</div>-->
+							
+							<table class="layui-table layui-form">
+								<tr>
+									<td style="background-color: #C2C2C2; text-align: center;" colspan="12"> 任职教育人才培养方案</td>
+								</tr>
+
+								<tr>
+									<td colspan="12">建筑类</td>
+								</tr>
+								<tr>
+									<td >必修课</td>
+									<td colspan="4">额定学分：<input value="2.0">  额定学时：<input value="36">  <button>应用</button></td>
+
+									<td colspan="4"><button>设置课程</button></td>
+								</tr>
+								<tr>
+									<td colspan="12">
+										<table class="layui-table layui-form">
+
+											<tr>
+												<td>删除</td>
+												<td>课程编号(名称)</td>
+												<td>学分</td>
+												<td>总学时</td>
+												<td>学期</td>
+												<td>修习类型</td>
+												<td>考核方式</td>
+												<td>其他科开课学期</td>
+											</tr>
+											<tr>
+												<td><a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+													<i class="layui-icon">&#xe640; 删除</i>
+												</a></td>
+												<td>011（朝鲜语）</td>
+												<td>2.0</td>
+												<td>36</td>
+												<td><input placeholder="请输入学期"></td>
+												<td><input placeholder="请输入选修必修"></td>
+												<td><input placeholder="请输入考核方式"></td>
+												<td><input placeholder="请输入其他开课学期"></td>
+											</tr>
+
+
+										</table>
+
+									</td>
+								</tr>
+								<tr>
+									<td >选修课</td>
+									<td colspan="4">额定学分：<input value="2.0">  额定学时：<input value="36">  <button>应用</button></td>
+
+									<td colspan="4"><button>设置课程</button></td>
+								</tr>
+
+								<tr>
+									<td style="background-color: #C2C2C2;" colspan="12">文艺类</td>
+								</tr>
+								<tr>
+									<td >必修课</td>
+									<td colspan="4">额定学分：<input value="2.0">  额定学时：<input value="36">  <button>应用</button></td>
+
+									<td colspan="4"><button>设置课程</button></td>
+								</tr>
+
+							</table>
+							<button  type="button" class="btn btn-default dropdown-toggle" onclick="xq()">保存</button>
+							<button style="margin-left: 10px;"  type="button" class="btn btn-default dropdown-toggle" onclick="">预览</button>
+							<button  type="button" class="btn btn-default dropdown-toggle" onclick="xq()">取消</button>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+	<script>
+		  $(function (){
+		      $("[data-toggle='popover']").popover();
+		  });
+			
+			function fh(){
+				window.location.href='msasep.html'
+			}
+		function xq()(){
+			window.location.href='addcourse.html'
+		}
+	</script>
+</html>
