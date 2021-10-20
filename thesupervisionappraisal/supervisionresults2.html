@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>护理员列表页</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/xadmin.css">
+        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/xadmin.js"></script>
+		<script type="text/javascript" src="../js/nursingmanager/list.js"></script>
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+		<div class="x-nav">
+			<span class="layui-breadcrumb">
+				<a href="#">首页</a>
+				<a href="#">评教管理</a>
+				<a>
+					<cite>督导结果分析</cite>
+				</a>
+<!--				标准体系管理-->
+			</span>
+			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
+			    数据操作提示
+			</span>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="开始日" name="start" id="start">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="截止日" name="end" id="end">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input type="text" name="username"  placeholder="护理等级" autocomplete="off" class="layui-input">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
+<!--                                </div>-->
+                            </form>
+                        </div>
+                        <div class="layui-card-header">
+                           学期：<select>
+                            <option>2021秋</option>
+                            <option>2021春</option>
+                            <option>2020春</option>
+                            <option>2020秋</option>
+                        </select>
+                            &nbsp;&nbsp;
+                            <button style="background-color: blue" class="layui-btn layui-btn-danger">查询</button>
+                            &nbsp;&nbsp;
+<!--                            <button style="background-color: blue" onclick="xadmin.add('添加专业','undertakeprofessionaltrainingtasks3.html',800,480)" class="layui-btn layui-btn-danger">-->
+<!--                                添加专业-->
+<!--                            </button>-->
+                            &nbsp;&nbsp;
+<!--                            <button style="background-color: blue" class="layui-btn layui-btn-danger">批量选中删除</button>-->
+                        </div>
+                        <div class="layui-card-body layui-table-body layui-table-main">
+                            <table class="layui-table layui-form">
+								<thead>
+								<tr>
+
+                                    <th>督导专家隶属</th>
+                                    <th>督导专家人数</th>
+                                    <th>听课总次数</th>
+                                    <th>优</th>
+                                    <th>比例</th>
+                                    <th>良</th>
+                                    <th>比例</th>
+                                    <th>中</th>
+                                    <th>比例</th>
+                                    <th>差</th>
+                                    <th>比例</th>
+
+
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+                                    <td>院级督导专家</td>
+									<td>3</td>
+                                    <td>17</td>
+                                    <td>5</td>
+                                    <td>29.41%</td>
+                                    <td>12</td>
+                                    <td>70.59%</td>
+                                    <td>0</td>
+                                    <td>0%</td>
+                                    <td>0</td>
+                                    <td>0%</td>
+
+                                </tr>
+
+								</tbody>
+                            </table>
+                            <p>共有：14 条记录 </p>
+
+                            <div>
+                                导出数据：<button>导出Excel</button>
+                            </div>
+                        </div>
+
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                <div>
+									<a class="prev" href="">&lt;&lt;</a>
+									<a class="num" href="">1</a>
+									<span class="current">2</span>
+									<a class="num" href="">3</a>
+									<a class="next" href="">&gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
