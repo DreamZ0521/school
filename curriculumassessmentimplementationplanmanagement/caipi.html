@@ -32,33 +32,100 @@
         <div class="layui-fluid">
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
-					<div class="layui-card-body ">
-					    <form class="layui-form layui-col-space5">
-					        <div class="layui-inline layui-show-xs-block">
-					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">
-					        </div>
-					        <div class="layui-inline layui-show-xs-block">
-					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-					        </div>
-					    </form>
-					</div>
+<!--					<div class="layui-card-body ">-->
+<!--					    <form class="layui-form layui-col-space5">-->
+
+
+<!--					        <div class="layui-inline layui-show-xs-block">-->
+<!--								<div class="layui-inline layui-show-xs-block">-->
+<!--							 	<select >-->
+<!--									<option>学期</option>-->
+<!--									<option>2001</option>-->
+<!--									<option>2002</option>-->
+<!--									<option>2003</option>-->
+<!--								</select>-->
+<!--								</div>-->
+<!--								<select >-->
+<!--									<option>系部</option>-->
+<!--									<option>英语系</option>-->
+<!--									<option>计算机系</option>-->
+<!--									<option>哲学系</option>-->
+<!--								</select>-->
+<!--								<input type="text" name="username"  placeholder="请输入课程名称" autocomplete="off" class="layui-input">-->
+<!--								<select >-->
+<!--									<option>状态</option>-->
+<!--									<option>确认</option>-->
+<!--									<option>待确认</option>-->
+<!--								</select>-->
+<!--&lt;!&ndash;					            <input type="text" name="username"  placeholder="请输入" autocomplete="off" class="layui-input">&ndash;&gt;-->
+<!--					        </div>-->
+<!--					        <div class="layui-inline layui-show-xs-block">-->
+
+
+<!--					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
+<!--					        </div>-->
+
+<!--					    </form>-->
+<!--					</div>-->
                     <div class="layui-card">
+
+						<div class="layui-card-header">
+							学期：<select>
+							<option>2016春</option>
+							<option>2016秋</option>
+							<option>2017春</option>
+							<option>2017秋</option>
+						</select>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							系部：<select>
+							<option>东亚</option>
+							<option>西亚</option>
+						</select>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							状态：<select>
+							<option>确认</option>
+							<option>待确认</option>
+						</select>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							课程名称：<input>
+
+							<button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>查询</button>
+						</div>
+
+
                         <div class="layui-card-header">
-                            <button class="layui-btn" onclick="xadmin.open('添加计划','caipiadd.html',500,480)"><i class="layui-icon"></i>添加计划</button>
-                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除计划</button>
-							<button class="layui-btn layui-btn-danger" onclick=""><i class="layui-icon"></i>审核通过</button>
-							<button class="layui-btn layui-btn-danger" onclick=""><i class="layui-icon"></i>变更审核</button>
+                            <button class="layui-btn" onclick="xadmin.open('添加计划','caipiadd.html',700,480)"><i class="layui-icon"></i>添加计划</button>
+                            <button class="layui-btn layui-btn-danger"  onclick="delAll()"><i class="layui-icon"></i>删除计划</button>
+							<button class="layui-btn layui-btn-danger" style="background-color: #5bc0de" onclick=""><i class="layui-icon"></i>审核通过</button>
+<!--							<button class="layui-btn layui-btn-danger" style="background-color: #1E9FFF" onclick=""><i class="layui-icon"></i>变更审核</button>-->
+
+							<button class="layui-btn layui-btn-danger" style="background-color: #66afe9" onclick=""><i class="layui-icon"></i>确认</button>
+							<button class="layui-btn layui-btn-danger" style="background-color: #66afe9" onclick=""><i class="layui-icon"></i>打回</button>
+							<button class="layui-btn layui-btn-danger" style="background-color: #66afe9" onclick=""><i class="layui-icon"></i>打印</button>
+
+
+<!--							<button>确认</button>-->
+<!--							<button>打回</button>-->
+<!--							<button>打印</button>-->
 						</div>
                         <div class="layui-card-body layui-table-body layui-table-main">
+
+
                             <table class="layui-table layui-form">
                                 <thead>
 									<tr>
 										<th>选择</th>
-										<th>实施名称</th>
-										<th>信息1</th>
-										<th>信息2</th>
-										<th>信息3</th>
-										<th>信息4</th>
+										<th>课程编号</th>
+										<th>课程名称</th>
+										<th>系部</th>
+										<th>开课教研室</th>
+										<th>课程负责人</th>
+										<th>分制</th>
+										<th>课下作业所占比例</th>
+										<th>课堂评测</th>
+										<th>期中考试</th>
+										<th>课终考核</th>
+										<th>状态</th>
 										<th>操作</th>
 									</tr>
                                 </thead>
@@ -67,20 +134,23 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
+										<td>062515</td>
+										<td>计算机基础</td>
+										<td>计算机系</td>
+										<td>计算机教研室</td>
+										<td>陈燕</td>
+										<td>百分制</td>
+										<td>20%</td>
+										<td>20%</td>
+										<td>0%</td>
+										<td>60%</td>
+										<td>待确认</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',870,650)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 变更审核</i>
 											</a>
 										</td>
 									</tr>
@@ -88,20 +158,23 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
+										<td>062545</td>
+										<td>专业英语</td>
+										<td>英语系</td>
+										<td>英语教研室</td>
+										<td>王菲</td>
+										<td>百分制</td>
+										<td>20%</td>
+										<td>20%</td>
+										<td>0%</td>
+										<td>60%</td>
+										<td>待确认</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改"  style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 变更审核</i>
 											</a>
 										</td>
 									</tr>
@@ -109,88 +182,35 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
+										<td>908887</td>
+										<td>古文学</td>
+										<td>文学系</td>
+										<td>文学教研室</td>
+										<td>王艳</td>
+										<td>百分制</td>
+										<td>20%</td>
+										<td>10%</td>
+										<td>0%</td>
+										<td>70%</td>
+										<td>待确认</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('变更审核','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 变更审核</i>
 											</a>
 										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
 								</tbody>
                             </table>
+							<p>共有：14 条记录 </p>
+
+							<div>
+								导出数据：<button>导出Excel</button>
+<!--								<button class="layui-btn layui-btn-danger" style="background-color: #66afe9" onclick=""><i class="layui-icon"></i>导出Excel</button>-->
+
+							</div>
+						</div>
                         </div>
                         <div class="layui-card-body ">
                             <div class="page">

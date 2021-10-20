@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
-    <head>
-        <meta charset="UTF-8">
-        <title>设备列表页</title>
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
-        <link rel="stylesheet" href="../css/font.css">
-        <link rel="stylesheet" href="../css/xadmin.css">
-        <script src="../lib/layui/layui.js" charset="utf-8"></script>
-        <script type="text/javascript" src="../js/xadmin.js"></script>
-		<script type="text/javascript" src="../js/nursingItemmanager/list.js"></script>
-        <!--[if lt IE 9]>
-          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-		<div class="x-nav">
+<head>
+	<meta charset="UTF-8">
+	<title>设备列表页</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+	<link rel="stylesheet" href="../css/font.css">
+	<link rel="stylesheet" href="../css/xadmin.css">
+	<script src="../lib/layui/layui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/xadmin.js"></script>
+	<script type="text/javascript" src="../js/nursingItemmanager/list.js"></script>
+	<!--[if lt IE 9]>
+	<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+	<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="x-nav">
 			<span class="layui-breadcrumb">
 				<a href="#">首页</a>
 				<a href="#">课程考核管理</a>
@@ -25,183 +25,116 @@
 					<cite>试卷和试题管理</cite>
 				</a>
 			</span>
-			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
+	<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
 			    数据操作提示
 			</span>
-        </div>
-        <div class="layui-fluid">
-            <div class="layui-row layui-col-space15">
-                <div class="layui-col-md12">
-					<div class="layui-card-body ">
-					    <form class="layui-form layui-col-space5">
-<!--					        <div class="layui-inline layui-show-xs-block">-->
-<!--					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">-->
-<!--					        </div>-->
-<!--					        <div class="layui-inline layui-show-xs-block">-->
-<!--					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
-<!--					        </div>-->
-					    </form>
+</div>
+<div class="layui-fluid">
+	<div class="layui-row layui-col-space15">
+		<div class="layui-col-md12">
+			<div class="layui-card-body ">
+				<form class="layui-form layui-col-space5">
+					<!--					        <div class="layui-inline layui-show-xs-block">-->
+					<!--					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">-->
+					<!--					        </div>-->
+					<!--					        <div class="layui-inline layui-show-xs-block">-->
+					<!--					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
+					<!--					        </div>-->
+				</form>
+			</div>
+			<div class="layui-card">
+				<div class="layui-card-header">
+					<button class="layui-btn" onclick="xadmin.open('制定缓考计划','delaymakeupexaminationarrangementadd.html',800,450)"><i class="layui-icon"></i>制定缓考计划</button>
+					<!--                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除设备</button>-->
+				</div>
+				<div class="layui-card-body layui-table-body layui-table-main">
+					<table class="layui-table layui-form">
+						<thead>
+						<tr>
+							<th>选择</th>
+							<th>缓考计划编号</th>
+							<th>缓考人员数量</th>
+							<th>缓考时间</th>
+							<th>缓考节次</th>
+							<th>监考人</th>
+							<th>操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<input type="checkbox" name="id" value="1"   lay-skin="primary">
+							</td>
+							<td>第一次缓考</td>
+							<td>33人</td>
+							<td>2020.09.01</td>
+							<td>第一节</td>
+							<td>王老师</td>
+							<td class="td-manage">
+								<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+								<!--												<i class="layui-icon">&#xe601;</i>-->
+								<!--											</a>-->
+								<a title="删除" style="color: #66afe9" onclick="member_del(this,'要删除的id')" href="javascript:;">
+									<i class="layui-icon">&#xe640; 删除</i>
+								</a>
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="id" value="1"   lay-skin="primary">
+							</td>
+							<td>第五次缓考</td>
+							<td>39人</td>
+							<td>2020.09.01</td>
+							<td>第三节</td>
+							<td>李老师</td>
+
+							<td class="td-manage">
+								<a title="删除" style="color: #66afe9" onclick="member_del(this,'要删除的id')" href="javascript:;">
+									<i class="layui-icon">&#xe640; 删除</i>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="checkbox" name="id" value="1"   lay-skin="primary">
+							</td>
+							<td>第二次缓考</td>
+							<td>35人</td>
+							<td>2020.09.02</td>
+							<td>第四节</td>
+							<td>张老师</td>
+
+							<td class="td-manage">
+								<a title="删除" style="color: #66afe9" onclick="member_del(this,'要删除的id')" href="javascript:;">
+									<i class="layui-icon">&#xe640; 删除</i>
+								</a>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<p>共有：14 条记录 </p>
+					<div>
+						导出数据：<button>导出Excel</button>
 					</div>
-                    <div class="layui-card">
-<!--                        <div class="layui-card-header">-->
-<!--                            <button class="layui-btn" onclick="xadmin.open('添加设备','add.html',500,480)"><i class="layui-icon"></i>添加设备</button>-->
-<!--                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除设备</button>-->
-<!--                        </div>-->
-                        <div class="layui-card-body layui-table-body layui-table-main">
-                            <table class="layui-table layui-form">
-                                <thead>
-									<tr>
-										<th>选择</th>
-										<th>补考人员姓名</th>
-										<th>补考人员编号</th>
-										<th>补考次数</th>
-										<th>操作</th>
-									</tr>
-                                </thead>
-                                <tbody>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>王五</td>
-										<td>q111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>李四</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>张三</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-								</tbody>
-                            </table>
-                        </div>
-                        <div class="layui-card-body ">
-                            <div class="page">
-                                <div>
-									<a class="prev" href="">&lt;&lt;</a>
-									<a class="num" href="">1</a>
-									<span class="current">2</span>
-									<a class="num" href="">3</a>
-									<a class="next" href="">&gt;&gt;</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </body>
+
+				</div>
+				<div class="layui-card-body ">
+					<div class="page">
+						<div>
+							<a class="prev" href="">&lt;&lt;</a>
+							<a class="num" href="">1</a>
+							<span class="current">2</span>
+							<a class="num" href="">3</a>
+							<a class="next" href="">&gt;&gt;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
 </html>

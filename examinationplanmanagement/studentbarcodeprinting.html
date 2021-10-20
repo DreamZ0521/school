@@ -2,7 +2,7 @@
 <html class="x-admin-sm">
     <head>
         <meta charset="UTF-8">
-        <title>设备列表页</title>
+        <title></title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -35,10 +35,14 @@
 					<div class="layui-card-body ">
 					    <form class="layui-form layui-col-space5">
 					        <div class="layui-inline layui-show-xs-block">
-					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">
+					            <input type="text" name="username"  placeholder="学员姓名" autocomplete="off" class="layui-input">
 					        </div>
 					        <div class="layui-inline layui-show-xs-block">
 					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+
+								<button style="background-color: #66afe9"   onclick="xadmin.add('新建考试计划','examarrangementadd.html',800,480)"
+										class="layui-btn layui-btn-danger">
+									一键打印</button>
 					        </div>
 					    </form>
 					</div>
@@ -52,12 +56,11 @@
                                 <thead>
 								<tr>
 									<th>选择</th>
-									<th>学员名称</th>
+									<th>学员姓名</th>
 									<th>学员编号</th>
-<!--									<th>学员</th>-->
-<!--									<th>监考人</th>-->
-<!--									<th>考试班次</th>-->
-<!--									<th>考试节次</th>-->
+									<th>学员班级</th>
+									<th>操作</th>
+
 								</tr>
                                 </thead>
                                 <tbody>
@@ -65,134 +68,54 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary">
 										</td>
-										<td>李</td>
+										<td>李飞</td>
 										<td>e1001</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-<!--										<td>未租赁</td>-->
+										<td>计算机班</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-
-											<a title="打印条形码"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary">
-										</td>
-										<td>张</td>
-										<td>e1001</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-<!--										<td>未租赁</td>-->
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-、
-											<a title="打印条形码"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary">
-										</td>
-										<td>王</td>
-										<td>e1001</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-<!--										<td>未租赁</td>-->
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-
-											<a title="打印条形码"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-<!--
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary">
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary">
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary">
-										</td>
-										<td>e1001</td>
-										<td>计划1</td>
-										<td>5000</td>
-										<td>100</td>
-										<td>未租赁</td>
-										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
-											</a>
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
+<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
+<!--												<i class="layui-icon">&#xe601;</i>-->
 <!--											</a>-->
+<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
+<!--												<i class="layui-icon">&#xe640;</i>-->
+<!--											</a>-->
+
+											<a title="打印条形码" style="color: #66afe9" onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 打印条形码</i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" name="id" value="1"   lay-skin="primary">
+										</td>
+										<td>张汉</td>
+										<td>e1001</td>
+										<td>计算机班</td>
+										<td class="td-manage">
+											<a title="打印条形码" style="color: #66afe9" onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 打印条形码</i>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" name="id" value="1"   lay-skin="primary">
+										</td>
+										<td>王苗</td>
+										<td>e1001</td>
+										<td>计算机班</td>
+										<td class="td-manage">
+											<a title="打印条形码" style="color: #66afe9" onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 打印条形码</i>
+											</a>
 										</td>
 									</tr>
 								</tbody>
                             </table>
+							<p>共有：14 条记录 </p>
+							<div>
+								导出数据：<button>导出Excel</button>
+							</div>
                         </div>
                         <div class="layui-card-body ">
                             <div class="page">

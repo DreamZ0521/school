@@ -34,43 +34,43 @@
                 <div class="layui-col-md12">
 					<div class="layui-card-body ">
 					    <form class="layui-form layui-col-space5">
-<!--					        <div class="layui-inline layui-show-xs-block">-->
-<!--					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">-->
-<!--					        </div>-->
-<!--					        <div class="layui-inline layui-show-xs-block">-->
-<!--					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
-<!--					        </div>-->
+					        <div class="layui-inline layui-show-xs-block">
+					            <input type="text" name="username"  placeholder="搜索" autocomplete="off" class="layui-input">
+					        </div>
+					        <div class="layui-inline layui-show-xs-block">
+					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+					        </div>
 					    </form>
 					</div>
                     <div class="layui-card">
-                        <div class="layui-card-header">
-                            <button class="layui-btn" onclick="xadmin.open('添加设备','testbookmaterialprintingadd.html',500,480)"><i class="layui-icon"></i>添加试卷</button>
-                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除试卷</button>
-                        </div>
+<!--                        <div class="layui-card-header">-->
+<!--                            <button class="layui-btn" onclick="xadmin.open('添加设备','testbookmaterialprintingadd.html',500,480)"><i class="layui-icon"></i>添加试卷</button>-->
+<!--                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除试卷</button>-->
+<!--                        </div>-->
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
                                 <thead>
 									<tr>
-										<th>选择</th>
+<!--										<th>选择</th>-->
 										<th>试卷名称</th>
 										<th>试卷编号</th>
+										<th>试题类型</th>
 										<th>试卷作者</th>
 										<th>操作</th>
 									</tr>
                                 </thead>
                                 <tbody>
 									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>王五</td>
-										<td>q111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
+<!--										<td>-->
+<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
+<!--										</td>-->
+										<td>试卷1</td>
+										<td>QW121</td>
+										<td>计算机类</td>
+										<td>王老师</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a onclick="" href="javascript:;"  style="color: #66afe9" title="下载">
+												<i class="layui-icon">&#xe601; 打印试卷</i>
 											</a>
 <!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
 <!--												<i class="layui-icon">&#xe640;</i>-->
@@ -81,17 +81,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>李四</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
+<!--										<td>-->
+<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
+<!--										</td>-->
+										<td>试卷2</td>
+										<td>QW121</td>
+										<td>计算机类</td>
+										<td>王老师</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a onclick="" href="javascript:;" style="color: #66afe9" title="下载">
+												<i class="layui-icon">&#xe601; 打印试卷</i>
 											</a>
 <!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
 <!--												<i class="layui-icon">&#xe640;</i>-->
@@ -165,24 +164,17 @@
 <!--										</td>-->
 <!--									</tr>-->
 									<tr>
-										<td>
-											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
-										</td>
-										<td>张三</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
+<!--										<td>-->
+<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
+<!--										</td>-->
+										<td>试卷3</td>
+										<td>QW121</td>
+										<td>计算机类</td>
+										<td>王老师</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a onclick="" href="javascript:;" style="color: #66afe9" title="打印">
+												<i class="layui-icon">&#xe601; 打印试卷</i>
 											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
 										</td>
 									</tr>
 								</tbody>

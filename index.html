@@ -51,11 +51,17 @@
 			   window.xadmin.add_tab('教材库管理','nursingmanage/theaching.html');
 			   
 			}
-			
-		
-			
-			
-			//师训管理-1-teachingtaskmanagment
+
+            function xueyuanyuanli(){
+                $('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
+
+                window.xadmin.add_tab('教材库管理','xueyuanyuanli/xueqiyuanli.html');
+
+            }
+
+
+
+            //师训管理-1-teachingtaskmanagment
 			function addtabacteq(){
 			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
 			   window.xadmin.add_tab('制定专业班次学期执行计划','teachingtaskmanagment/msasep.html');
@@ -138,7 +144,7 @@
 			//课程考核管理-考试计划管理-examination plan management
 			function examinationplanmanagement(){
 			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
-			   window.xadmin.add_tab('考试安排','examinationplanmanagement/examarrangement.html');
+			   window.xadmin.add_tab('考试安排','examinationplanmanagement/examarrangement3.html');
 			   window.xadmin.add_tab('学员条形码打印','examinationplanmanagement/studentbarcodeprinting.html');
 			   window.xadmin.add_tab('缓考审批','examinationplanmanagement/iftheexaminationandapproval.html');
 			   window.xadmin.add_tab('补缓考报名','examinationplanmanagement/delaymakeupregistration.html');	   
@@ -206,18 +212,19 @@
 			//评教管理-指标体系-target system
 			function targetsystem(){
 			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
-			   window.xadmin.add_tab('标准等级管理','examinationplanmanagement/examarrangement.html');
-			   window.xadmin.add_tab('标准体系管理','examinationplanmanagement/studentbarcodeprinting.html');
-			   
+
+			   window.xadmin.add_tab('标准体系管理','examinationplanmanagement/biaozhuntixiguanli.html');
+                window.xadmin.add_tab('标准等级管理','examinationplanmanagement/examarrangement.html');
+
 				
 			}
 			//评教管理-学员评教-students'
-			function targetsystem(){
+			function collegeevaluation(){
 			$('.layui-tab-title li[lay-id]').find('.layui-tab-close').click();
-			   window.xadmin.add_tab('设置参评对象','examinationplanmanagement/examarrangement.html');
-			   window.xadmin.add_tab('创建学员评教活动','examinationplanmanagement/studentbarcodeprinting.html');
-			     window.xadmin.add_tab('评教结果统计分析','examinationplanmanagement/studentbarcodeprinting.html');
-				
+                window.xadmin.add_tab('设置参评对象','examinationplanmanagement/contestantobject.html');
+			   window.xadmin.add_tab('评教结果统计分析','collegeevaluation/studentbarcodeprinting1.html');
+                window.xadmin.add_tab('创建学员评教活动','collegeevaluation/studentbarcodeprinting.html');
+
 			}
 			//评教管理-督导评教-the supervision appraisal
 			function thesupervisionappraisal(){
@@ -226,8 +233,8 @@
 			   window.xadmin.add_tab('指标选择','examinationplanmanagement/studentbarcodeprinting.html');
 			     window.xadmin.add_tab('填报督导信息','examinationplanmanagement/studentbarcodeprinting.html');
 				window.xadmin.add_tab('督导信息管理','examinationplanmanagement/examarrangement.html');
-				window.xadmin.add_tab('督导结果统计','examinationplanmanagement/studentbarcodeprinting.html');
-				  window.xadmin.add_tab('督导结果分析','examinationplanmanagement/studentbarcodeprinting.html');
+				window.xadmin.add_tab('督导结果统计','thesupervisionappraisal/supervisionresults.html');
+				  window.xadmin.add_tab('督导结果分析','thesupervisionappraisal/supervisionresults2.html');
 			}
 			
 		
@@ -298,6 +305,12 @@
                                 <a onclick="theaching()">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>教材库管理</cite>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="xueyuanyuanli()">
+                                    <i class="iconfont">&#xe6a7;</i>
+                                    <cite>学期院历管理</cite>
                                 </a>
                             </li>
                         </ul>
@@ -435,7 +448,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a onclick="targetsystem()">
+                                <a onclick="collegeevaluation()">
                                     <i class="iconfont">&#xe6a7;</i>
                                     <cite>学员评教</cite>
                                 </a>

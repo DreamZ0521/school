@@ -54,6 +54,7 @@
 										<th>选择</th>
 										<th>缓考人员姓名</th>
 										<th>缓考人员编号</th>
+										<th>缓考人员班级</th>
 										<th>缓考成绩</th>
 										<th>操作</th>
 									</tr>
@@ -63,20 +64,14 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>王五</td>
-										<td>q111</td>
-<!--										<td>5000</td>-->
+										<td>王飞</td>
+										<td>Q223</td>
+										<td>计算机班</td>
 <!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>23</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-											<a title="缓考提交"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a style="color: #66afe9" href="javascript:;"  title="">
+												<i class="layui-icon">&#xe642; 审批通过</i>
 											</a>
 										</td>
 									</tr>
@@ -84,21 +79,23 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>李四</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
+										<td>李阳</td>
+										<td>W343</td>
+										<td>计算机班</td>
+
+										<!--										<td>5000</td>-->
 <!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>56.0</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
+											<a style="color: #66afe9" href="javascript:;"  title="">
+												<i class="layui-icon">&#xe642; 审批通过</i>
 											</a>
 <!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
 <!--												<i class="layui-icon">&#xe640;</i>-->
 <!--											</a>-->
-											<a title="缓考提交"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
-											</a>
+<!--											<a title="缓考提交"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">-->
+<!--												<i class="layui-icon">&#xe642; 审批通过</i>-->
+<!--											</a>-->
 										</td>
 									</tr>
 <!--									<tr>-->
@@ -168,25 +165,27 @@
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>张三</td>
-										<td>q1111</td>
-<!--										<td>5000</td>-->
+										<td>张梦</td>
+										<td>E221</td>
+										<td>计算机班</td>
+
+										<!--										<td>5000</td>-->
 <!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>90</td>
 										<td class="td-manage">
-											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-												<i class="layui-icon">&#xe601;</i>
-											</a>
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-											<a title="缓考提交"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">
-												<i class="layui-icon">&#xe642;</i>
+											<a style="color: #66afe9" href="javascript:;"  title="">
+												<i class="layui-icon">&#xe642; 审批通过</i>
 											</a>
 										</td>
 									</tr>
 								</tbody>
                             </table>
+
+							<p>共有：14 条记录 </p>
+							<div>
+								导出数据：<button>导出Excel</button>
+							</div>
+
                         </div>
                         <div class="layui-card-body ">
                             <div class="page">
