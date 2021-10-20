@@ -33,18 +33,26 @@
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
 					<div class="layui-card-body ">
-					    <form class="layui-form layui-col-space5">
+<!--					    <form class="layui-form layui-col-space5">-->
 <!--					        <div class="layui-inline layui-show-xs-block">-->
 <!--					            <input type="text" name="username"  placeholder="设备名称" autocomplete="off" class="layui-input">-->
 <!--					        </div>-->
 <!--					        <div class="layui-inline layui-show-xs-block">-->
 <!--					            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
 <!--					        </div>-->
-					    </form>
+<!--					    </form>-->
 					</div>
                     <div class="layui-card">
                         <div class="layui-card-header">
-                            <button class="layui-btn" onclick="xadmin.open('添加设备','add.html',500,480)"><i class="layui-icon"></i>添加试题</button>
+							<div class="layui-inline layui-show-xs-block">
+								<input type="text" name="username"  placeholder="试题名称" autocomplete="off" class="layui-input">
+							</div>
+							<div class="layui-inline layui-show-xs-block">
+								<button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+
+								<button class="layui-btn" onclick="xadmin.open('添加试题','questionbankmanagementadd.html',800,250)"><i class="layui-icon"></i>添加试题</button>
+							</div>
+
 <!--                            <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>删除试题</button>-->
                         </div>
                         <div class="layui-card-body layui-table-body layui-table-main">
@@ -54,7 +62,9 @@
 										<th>选择</th>
 										<th>题目</th>
 										<th>答案</th>
+										<th>类目</th>
 										<th>出题人</th>
+										<th>类型</th>
 										<th>操作</th>
 									</tr>
                                 </thead>
@@ -65,124 +75,54 @@
 										</td>
 										<td>问题1</td>
 										<td>答案1</td>
-<!--										<td>5000</td>-->
+										<td>计算机大类</td>
 <!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>李老师</td>
+										<td>选择题</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,350)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
+											<a style="color: #66afe9" title="删除"  href="javascript:;">
+												<i class="layui-icon">&#xe640; 删除</i>
 											</a>
-<!--											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>问题1</td>
-										<td>答案1</td>
-<!--										<td>5000</td>-->
-<!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>问题2</td>
+										<td>答案2</td>
+										<td>文学大类</td>
+										<td>王老师</td>
+										<td>选择题</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,350)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
+											<a style="color: #66afe9" title="删除"  href="javascript:;">
+												<i class="layui-icon">&#xe640; 删除</i>
 											</a>
-<!--											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
 										</td>
 									</tr>
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
-<!--									<tr>-->
-<!--										<td>-->
-<!--											<input type="checkbox" name="id" value="1"   lay-skin="primary"> -->
-<!--										</td>-->
-<!--										<td>e1001</td>-->
-<!--										<td>设备名称1</td>-->
-<!--&lt;!&ndash;										<td>5000</td>&ndash;&gt;-->
-<!--&lt;!&ndash;										<td>100</td>&ndash;&gt;-->
-<!--										<td>未租赁</td>-->
-<!--										<td class="td-manage">-->
-<!--											<a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">-->
-<!--												<i class="layui-icon">&#xe601;</i>-->
-<!--											</a>-->
-<!--											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe640;</i>-->
-<!--											</a>-->
-<!--											<a title="详情"  onclick="xadmin.open('详情','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
-<!--										</td>-->
-<!--									</tr>-->
 									<tr>
 										<td>
 											<input type="checkbox" name="id" value="1"   lay-skin="primary"> 
 										</td>
-										<td>问题1</td>
-										<td>答案1</td>
-<!--										<td>5000</td>-->
+										<td>问题3</td>
+										<td>答案3</td>
+										<td>数学大类</td>
 <!--										<td>100</td>-->
-										<td>未设置</td>
+										<td>张老师</td>
+										<td>填空题</td>
 										<td class="td-manage">
-											<a onclick="" href="javascript:;"  title="下载">
-												<i class="layui-icon">&#xe601;</i>
+											<a title="修改" style="color: #1E9FFF" onclick="xadmin.open('修改','show.html',800,350)" href="javascript:;">
+												<i class="layui-icon">&#xe642; 修改</i>
 											</a>
-											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-												<i class="layui-icon">&#xe640;</i>
+											<a style="color: #66afe9" title="删除"  href="javascript:;">
+												<i class="layui-icon">&#xe640; 删除</i>
 											</a>
-<!--											<a title="安排补考"  onclick="xadmin.open('缓考提交','show.html',800,480)" href="javascript:;">-->
-<!--												<i class="layui-icon">&#xe642;</i>-->
-<!--											</a>-->
 										</td>
 									</tr>
 								</tbody>
