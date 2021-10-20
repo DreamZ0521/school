@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>护理员列表页</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/xadmin.css">
+        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/xadmin.js"></script>
+		<script type="text/javascript" src="../js/nursingmanager/list.js"></script>
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+		<div class="x-nav">
+			<span class="layui-breadcrumb">
+				<a href="#">首页</a>
+				<a href="#">计划管理</a>
+				<a>
+					<cite>督导评教</cite>
+				</a>
+<!--				学期院历管理-->
+			</span>
+			<span style="line-height:1.6em;margin-top:10px;float:right;color: #009F95;font-weight: bold;" onclick="location.reload()" title="刷新">
+			    数据操作提示
+			</span>
+        </div>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card" style="height: 770px">
+                        <div class="layui-card-body ">
+                            <form class="layui-form layui-col-space5">
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="开始日" name="start" id="start">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input class="layui-input"  autocomplete="off" placeholder="截止日" name="end" id="end">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <input type="text" name="username"  placeholder="护理等级" autocomplete="off" class="layui-input">-->
+<!--                                </div>-->
+<!--                                <div class="layui-inline layui-show-xs-block">-->
+<!--                                    <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>-->
+<!--                                </div>-->
+                            </form>
+                        </div>
+                        <div class="layui-card-header">
+<!--						教研室：<input>-->
+<!--							课程：<input>-->
+<!--							教员：<input>-->
+<!--							听客人：<input>-->
+<!--                            <button style="background-color: blue" class="layui-btn layui-btn-danger">-->
+<!--&lt;!&ndash;								<i class="layui-icon"></i>&ndash;&gt;-->
+<!--								查询</button>-->
+
+							<button style="background-color: blue" 	class="layui-btn layui-btn-danger" >批量删除</button>
+							<button style="background-color: blue"   onclick="xadmin.add('审核','shujuhuizongadd.html',800,480)"
+									class="layui-btn layui-btn-danger">
+								<!--								<i class="layui-icon"></i>-->
+								审核</button>
+                        </div>
+                        <div class="layui-card-body layui-table-body layui-table-main">
+                            <table class="layui-table layui-form">
+								<thead>
+
+								<tr>
+
+									<th>选中</th>
+									<th>课程名称</th>
+									<th>上课教员</th>
+									<th>工作部门</th>
+									<th>上课时间</th>
+									<th>听课节次</th>
+									<th>场地</th>
+									<th>评价等级</th>
+									<th>评价结果</th>
+									<th>听查课人</th>
+									<th>评教状态</th>
+									<th>发布状态</th>
+									<th>操作</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										<input type="checkbox" name="id" value="1"   lay-skin="primary">
+									</td>
+									<td>张三</td>
+									<td>办公室</td>
+									<td>院级督导专家</td>
+									<td>2</td>
+									<td>1</td>
+									<td>办公室</td>
+									<td>A</td>
+									<td>A</td>
+									<td>张三</td>
+									<td>已评价</td>
+									<td>已发布</td>
+
+
+										<td class="td-manage">
+<!--											<a onclick="xadmin.open('查看','tianbaodudaoxinxislook.html',800,480)" href="javascript:;"  title="查看">-->
+<!--												<i class="layui-icon">&#xe643;查看</i>-->
+<!--											</a>-->
+											<a title="修改角色"  onclick="xadmin.open('修改角色','shujuhuizongupdate.html',800,480)" href="javascript:;">
+												<i class="layui-icon">&#xe642;修改</i>
+											</a>
+											<a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+												<i class="layui-icon">&#xe640;</i>删除
+											</a>
+										</td>
+									</tr>
+
+
+								</tbody>
+                            </table>
+                        </div>
+                        <div class="layui-card-body ">
+                            <div class="page">
+                                <div>
+									<a class="prev" href="">&lt;&lt;</a>
+									<a class="num" href="">1</a>
+									<span class="current">2</span>
+									<a class="num" href="">3</a>
+									<a class="next" href="">&gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
